@@ -1,0 +1,225 @@
+.defaultPage-home-section-one-main-container {
+  /* background-image: url("../../assets/product-clay/banner.png"); */
+  background-size: cover;
+  background-position: center;
+  height: 821px;
+  display: flex;
+  align-items: start;
+  position: relative;
+}
+
+.defaultPage-color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(11, 18, 28, 0.5);
+  z-index: 0;
+}
+
+.defaultPage-home-banner-text-container {
+  padding-top: 100px;
+}
+
+.defaultPage-home-section-one-banner-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 53px;
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.defaultPage-home-section-one-sub-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+  
+}
+
+@media (max-width: 500px) {
+  .defaultPage-home-banner-text-container{
+    padding-top: 200px;
+  }
+}
+
+/* ---------------------- Second Section --------------------- */
+.defaultPage-journey-section {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.defaultPage-journey-section .row,
+.defaultPage-journey-section .col-lg-6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.defaultPage-green-container {
+  background-color: #253373;
+  height: 100%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 40px;
+}
+
+.defaultPage-green-container-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.defaultPage-green-container-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.defaultPage-green-container-sub-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.defaultPage-green-container-each-point {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  color: #ffffff;
+  font-style: normal;
+}
+
+@media(max-width: 768px) {
+  .defaultPage-green-container-heading {
+    margin-top: 20px;
+  }
+  .defaultPage-green-container {
+    padding: 20px;
+  }
+}
+
+/* ---------------------- Third Section --------------------- */
+.defaultPage-third-section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 80px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.defaultPage-third-section-left {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.defaultPage-third-section-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 58px;
+  letter-spacing: 0px;
+  color: #0B121C;
+  margin: 0;
+  text-align: left;
+}
+
+.defaultPage-third-section-right {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.defaultPage-third-section-card {
+  padding: 14px 18px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  line-height: 24px;
+  color: #0B121C;
+}
+
+@media(max-width: 500px) {
+  .defaultPage-third-section-container{
+    padding: 60px 40px;
+  }
+  .defaultPage-third-section-heading {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .defaultPage-third-section-card {
+    font-size: 12px;
+    padding: 14px 10px;
+    text-align: justify;
+  }
+}
+
+/* -------------------------------------------------- Fourth Section --------------------- */
+.defaultPage-fourth-section-main-container {
+  /* background-image: url("../../assets/Product-Quartz/thumb.png"); */
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-image 0.3s ease;
+}
+
+.defaultPage-fourth-section-main-container.defaultPage-video-playing {
+  background-image: none;
+  background-color: #000;
+}
+
+.defaultPage-fourth-section-play-icon {
+  cursor: pointer;
+  z-index: 2;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.defaultPage-fourth-section-full-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+}
+
+.defaultPage-fourth-section-close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  color: blue;
+}
+

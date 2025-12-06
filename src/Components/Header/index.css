@@ -1,0 +1,85 @@
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.main-container{
+    background-color: #000;
+
+}
+.header-logo-styling{
+    height: 77x;
+    width:78px;
+}
+.header-item-styling{
+    font-family: 'Inter',sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 14px;
+    font-style:normal;
+    margin-right: 40px;
+    text-decoration: none;
+}
+@media(max-width:768px){
+   .header-logo-styling{
+    height: 59px;
+    width: 60px;
+   }
+}
+.dropdown-item{
+    font-family: 'Inter',sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0B121C;
+}
+.dropdown-item:hover{
+    background-color: lightblue;
+}
+/* Target only the Products dropdown menu */
+.navbar-nav .dropdown-menu {
+  min-width: 100px; /* Decrease width */
+  padding: 8px 0;   /* Reduce padding */
+  
+}
+
+/* Optional: Adjust individual dropdown items */
+.navbar-nav .dropdown-menu .dropdown-item {
+  padding: 6px 12px; /* Smaller item height */
+}
+@media(max-width:992px){
+  .main-container{
+    background-color:rgba(0,0,0,0);
+  }
+  .navbar-nav .dropdown-menu {
+    width: 40%; /* Decrease width */
+    padding: 8px 0;   /* Reduce padding */
+  
+}  
+}
+@media(max-width:768px){
+  .navbar-nav .dropdown-menu {
+    width: 90%; /* Decrease width */
+    padding: 8px 0;   /* Reduce padding */
+  
+}  
+ .navbar-toggler{
+    padding: 3px;
+    border: none;
+    
+
+  }
+  .navbar-toggler-icon{
+    color: #000;
+    background-color: #000;
+  }
+}
+
+/* Background when scrolled */
+.navbar.scrolled {
+  background-color: #000 !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-collapse{
+    background-color: #000;
+    padding: 20px;
+}

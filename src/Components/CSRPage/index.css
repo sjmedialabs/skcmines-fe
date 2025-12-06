@@ -1,0 +1,173 @@
+.eightPage-home-section-one-main-container {
+  /* background-image: url("../../assets/CSR/eightBanner.png"); */
+  background-size: cover;
+  background-position: center;
+  height: 580px;
+  display: flex;
+  align-items: start;
+  position: relative;
+  margin-top: 80px;
+} 
+
+@media(max-width:768px){
+  .eightPage-home-section-one-main-container {
+    min-height: 400px;
+    margin-top: 0px;
+  }
+    
+}
+
+.eightPage-color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(11, 18, 28, 0.5);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.eightPage-home-banner-text-container {
+  padding-top: 220px;
+}
+
+.eightPage-home-section-one-banner-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 53px;
+  color: #ffffff;
+}
+
+.eightPage-home-section-one-sub-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .eightPage-home-banner-text-container{
+    padding-top: 0px;
+  }
+  .eightPage-home-section-one-main-container{
+    align-items: center;
+    width: 100%;
+    height: 300px;
+  }
+  .eightPage-home-section-one-banner-heading {
+    font-size: 40px;
+  }
+  .eightPage-home-section-one-sub-heading {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .eightPage-home-section-one-banner-heading {
+    font-size: 32px;
+  }
+  .eightPage-home-section-one-sub-heading {
+    font-size: 16px;
+  }
+}
+
+/*-------------------------------------------Second-Section-------------------------------------*/
+
+.eightPage-second-section-main-container {
+  margin-top: 3px;
+  position: relative;
+  background-color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Ensure overlay doesn't leak out */
+}
+
+.eightPage-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#9EC0E0;
+  z-index: 0; /* Behind the content */
+  opacity: 1; /* Adjust transparency as needed */
+}
+
+.eightPage-content-container {
+  position: relative;
+  z-index: 1; /* Bring content above overlay */
+}
+
+.eightPage-second-section-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #0B121C;
+  font-size: 32px;
+  font-style: normal;
+}
+
+.eightPage-second-section-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #0B121C;
+  font-size: 14px;
+  font-style: normal;
+}
+
+@media (max-width: 500px) {
+ 
+
+  .eightPage-second-section-heading {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .eightPage-second-section-text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+/*-------------------------------------------------third-section-----------------------------*/
+.eightPage-third-section-main-container{
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.eightPage-third-section-main-container h1{
+  font-family: "Inter",sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color:#0B121C;
+  font-style: normal;
+  text-align: center;
+}
+.eightPage-csr-card {
+  text-align: left;
+}
+
+.eightPage-csr-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.eightPage-csr-caption {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0B121C;
+}
+
+@media (max-width: 500px) {
+  .eightPage-third-section-main-container{
+    font-size: 24px;
+    padding-top: 10px;
+
+  }
+}

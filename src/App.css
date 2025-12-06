@@ -1,0 +1,24 @@
+
+.main-heading{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 100;
+  color: blue;
+  text-align: center;
+}
+.router-link-styling{
+  text-decoration: none !important;
+}
+.fall-back-loading-main-container{
+   position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  background: white; /* Optional */
+  z-index: 9999;
+}

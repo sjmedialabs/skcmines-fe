@@ -1,0 +1,148 @@
+.thirdPage-home-section-one-main-container {
+    /* background-image: url("../../assets/products/thirdPageBanner.png"); */
+    background-size: cover;
+    background-position: center;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+@media(max-width:992px){
+    .thirdPage-home-section-one-main-container {
+        min-height: 400px;
+        margin-top: 0px;
+    }
+}
+
+.thirdPage-home-section-one-banner-heading {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 53px;
+    color: #ffffff;
+}
+
+.thirdPage-home-section-one-sub-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .thirdPage-home-section-one-main-container {
+        height: 300px;
+    }
+    .thirdPage-home-section-one-banner-heading {
+        font-size: 40px;
+    }
+    .thirdPage-home-section-one-sub-heading {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .thirdPage-home-section-one-banner-heading {
+        font-size: 32px;
+    }
+    .thirdPage-home-section-one-sub-heading {
+        font-size: 16px;
+    }
+}
+
+/*------------------------------------------------ Second Section------------------------------------- */
+.thirdPage-section-two-main-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42;
+}
+
+.thirdPage-products-section {
+    background-color: #B0B6D3;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 60px 40px;
+}
+
+.thirdPage-product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: full;
+    max-width: 366px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    line-clamp: 3;
+}
+
+.thirdPage-product-card:hover {
+    transform: translateY(-10px);
+}
+
+.thirdPage-product-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.thirdPage-product-body {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.thirdPage-product-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #000000;
+}
+.thirdPage-product-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000;
+  flex-grow: 1;
+  margin-bottom: 20px;
+
+  display: -webkit-box;             /* creates a flex-like box for clamping */
+  -webkit-line-clamp: 3;            /* limits text to 3 lines */
+  line-clamp: 3;                    /* standard property for compatibility */
+  -webkit-box-orient: vertical;     /* sets vertical flow */
+  overflow: hidden;                 /* hides overflowed text */
+}
+
+
+.thirdPage-read-more {
+    font-size: 14px;
+    color: red;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.thirdPage-read-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .thirdPage-products-section {
+        padding: 20px 20px;
+    }
+    .thirdPage-product-card {
+        height: auto;
+        max-width: 100%;
+    }
+
+   
+}
+@media (max-width: 768px) {
+.thirdPage-product-img {
+    height: 220px;
+}}

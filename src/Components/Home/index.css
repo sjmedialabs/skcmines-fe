@@ -1,0 +1,196 @@
+.home-section-one-main-container{
+    /* background-image: url("../../assets/Home page/homeBannerOne.png"); */
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    display: flex;                 /* flexbox for vertical centering */
+    align-items: center;  
+    margin-top: 10px;  
+}
+.home-section-one-main-container video{
+  height: 100vh;
+}
+.home-section-one-banner-heading{
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;          /* Regular */
+    font-style: normal;        /* not "Regular" — CSS accepts normal/italic */
+    font-size: 53px;             
+    color: #ffffff;
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.home-section-one-sub-heading{
+     font-family: 'Inter', sans-serif;
+    font-weight: 400;          /* Regular */
+    font-style: normal;        /* not "Regular" — CSS accepts normal/italic */
+    font-size: 20px;             
+    color: #ffffff;
+}
+@media (max-width:922px) {
+.home-section-one-main-container{
+    height: auto;
+    margin-top: 0px;
+
+  }
+  .home-section-one-main-container video{
+  height: auto;
+  min-height: 400px;
+}
+}
+
+@media (max-width:768px) {
+.home-section-one-main-container{
+    height: auto;
+    margin-top: 0px;
+    min-height: 350px;
+  }
+}  
+@media (max-width:500px) {
+  .home-section-one-main-container{
+    min-height: 350px;
+    height: auto;
+    margin-top: 0px;
+  }
+  .home-section-one-banner-heading{
+    font-size: 45px;
+  }
+  .home-section-one-sub-heading{
+    font-size: 25px;
+  }
+}
+
+/*-----------------------------------------second-section--------------------------------------------*/
+
+.home-section-two-main-container{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: -5px;
+  align-items: center;
+}
+
+.second-section-main-heading{
+  font-family: 'Inter', sans-serif;
+    font-weight: 300;          /* Regular */
+    font-style: normal;        /* not "Regular" — CSS accepts normal/italic */
+    font-size: 32px;             
+    color: #ffffff;
+}
+
+.second-section-sub-heading{
+   font-family: 'Inter', sans-serif;
+    font-weight: 300;          /* Regular */
+    font-style: normal;        /* not "Regular" — CSS accepts normal/italic */
+    font-size: 16px;             
+    color: #ffffff;
+}
+@media(max-width:922px){
+   .home-section-two-main-container{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    /* margin-top: -10px; */
+  } 
+}
+@media(max-width:768px){
+  .home-section-two-main-container{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin-top: -5px;
+  }
+  .second-section-sub-heading{
+    margin-top: 30px;
+    font-size: 14px;
+  }
+}
+@media(max-width:500px){
+   .home-section-two-main-container{
+    margin-top: -5px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+   }}
+
+/*----------------------------------------Third-section-----------------------------------*/
+
+.home-section-three-main-container{
+   /* background-image: url("http://api.skcmines.com/uploads/images/1763972010463-SKC- 1.jpg");  */
+  background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;                 /* flexbox for vertical centering */
+    align-items: center; 
+    padding-bottom: 20px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.home-section-third-card{
+  background-color: #0B121C99;
+  padding: 30px;
+  
+}
+.home-section-card-main-heading{
+   font-family: 'Inter', sans-serif;
+    font-weight: 350;          /* Regular */
+    font-style: normal;        /* not "Regular" — CSS accepts normal/italic */
+    font-size: 36px;             
+    color: #ffffff;
+    margin-bottom:20px ;
+}
+.home-section-card-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;          /* Regular */
+    font-style: normal;        /* not "Regular" — CSS accepts normal/italic */
+    font-size: 16px;             
+    color: #ffffff;
+}
+.home-section-quartz-heeading{
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.home-section-card-arrow-text{
+  font-family: 'Inter',sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color:#FFC000;
+  cursor: pointer;
+}
+.right-arrow-icon{
+  height: 15px;
+  width:13px;
+  color:#FFC000;
+}
+@media(max-width:1024px){
+  .home-section-three-main-container{
+    align-items: end;
+    min-height: 500px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+  }
+}
+
+
+/* --------------------------------------Fourth Section---------------------------------------*/
+
+.home-section-four{
+  background-image: url("../../assets/Home page/banner-3.png");
+}
+
+/*fifth Section */
+
+.home-section-five{
+  background-image: url("../../assets/Home page/banner-4.png");
+}
+
+/*sixth section */
+
+.home-section-six{
+  background-image: url("../../assets/Home page/banner-5.png");
+}
