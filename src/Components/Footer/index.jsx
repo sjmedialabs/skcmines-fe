@@ -7,6 +7,7 @@ import linkdin from "../../assets/Home page/linkdin.png";
 import { useEffect } from 'react';
 import skclogo from '../../assets/Home page/skclogo.png'
 // import logowhite from '../../assets/Home page/logowhite.png'
+import telephone from "../../assets/Home page/telephone.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
@@ -34,7 +35,10 @@ const FooterEl = () => {
                         alt="Arrow"
                         className="footer-arrow"
                     />
-                   <button className="contact-btn" onClick={()=>navigate('/contact-us')}>Contact us</button>
+                    <div className='contact-btn'>
+                    <img src={telephone} alt='telephone mt-1' className='telephone-image'/>
+                   <p className="mt-1" onClick={()=>navigate('/contact-us')}>Contact us</p>
+                   </div>
                 </div>
                 <div className="container-fluid mt-5">
                    <div className="row justify-content-between text-center text-lg-start align-items-start">
