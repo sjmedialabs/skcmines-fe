@@ -26,10 +26,10 @@ const FooterEl = () => {
     return (
         <>
             <div className='footer-main-container'>
-                <h1 className='footer-main-heading'>
+                {/* <h1 className='footer-main-heading'>
                     Work & play in life-changing places
-                </h1>
-                <div className="footer-line mb-5">
+                </h1> */}
+                <div className="footer-line mt-5 mb-5">
                     <img
                         src={footerArrow}
                         alt="Arrow"
