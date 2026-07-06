@@ -1,0 +1,301 @@
+.certificationsPage-banner-container {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.certificationsPage-color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 192, 0, 0.05) 0%, rgba(11, 18, 28, 0) 60%);
+}
+
+.certificationsPage-banner-text-container {
+  position: relative;
+  z-index: 2;
+}
+
+.certificationsPage-banner-heading {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.certificationsPage-banner-subheading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #FFC000;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.certificationsPage-grid-section {
+  background-color: #0b121c;
+  padding: 40px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Certifications Card Styling */
+
+.certification-card-link {
+  text-decoration: none !important;
+  color: inherit;
+  width: 100%;
+  display: flex;
+}
+
+.certification-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  cursor: pointer;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 192, 0, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 192, 0, 0.15);
+}
+
+/* .certification-image-container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.01);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+} */
+.certification-image-container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.01);
+  /* padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* height: 280px; */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.certification-img {
+  height: 100%;
+  width: 100%;
+  /* width: auto; */
+  /* object-fit: contain; */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: transform 0.4s ease;
+}
+
+.certification-card:hover .certification-img {
+  transform: scale(1.03);
+}
+
+.certification-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(11, 18, 28, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.certification-card:hover .certification-overlay {
+  opacity: 1;
+}
+
+.view-cert-btn {
+  color: #231f20;
+  background-color: #FFC000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 12px rgba(255, 192, 0, 0.3);
+}
+
+.certification-body {
+  padding: 20px;
+  background-color: rgba(11, 18, 28, 0.95);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.certification-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.certification-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #FFC000;
+  margin: 0;
+}
+
+@media(max-width: 768px) {
+  .certificationsPage-banner-container {
+    min-height: 300px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .certificationsPage-banner-heading {
+    font-size: 36px;
+  }
+
+  .certificationsPage-banner-subheading {
+    font-size: 16px;
+  }
+
+  .certificationsPage-grid-section {
+    padding: 50px 0;
+  }
+
+  .certification-image-container {
+    height: 240px;
+    padding: 16px;
+  }
+}
+
+/* Lightbox Modal */
+.cert-lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.cert-lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-lightbox-img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  animation: zoomIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cert-lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+  line-height: 1;
+}
+
+.cert-lightbox-close:hover {
+  background-color: #FFC000;
+  color: #000000;
+  border-color: #FFC000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Section Header Styles */
+.certifications-section-heading {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+
+.certifications-divider {
+  width: 80px;
+  height: 2px;
+  background-color: #FFC000;
+  margin: 20px auto;
+}
+
+.certifications-section-subheading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #FFC000;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

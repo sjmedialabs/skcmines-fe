@@ -175,6 +175,12 @@ const HeaderEl = () => {
             </li>
 
             <li className="nav-item mt-4 mt-lg-0">
+              <Link to="/certifications" className="header-item-styling" style={activeStyle("/certifications")}>
+                Certifications
+              </Link>
+            </li>
+
+            <li className="nav-item mt-4 mt-lg-0">
               <Link to="/csr" className="header-item-styling" style={activeStyle("/csr")}>
                 CSR
               </Link>

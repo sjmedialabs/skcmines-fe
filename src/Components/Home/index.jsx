@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const HomeEl = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedCertImage, setSelectedCertImage] = useState(null);
   const [videoLoading, setVideoLoading] = useState({}); // Track loading for each video by index
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
@@ -78,7 +79,7 @@ const HomeEl = () => {
           {enabledBanners.map((banner, idx) => (
             <Carousel.Item key={idx}>
               {banner.banner?.match(/\.(mp4|webm|ogg)$/i) ? (
-                <div style={{ position: 'relative', width: '100%'}}>
+                <div style={{ position: 'relative', width: '100%' }}>
                   {videoLoading[idx] !== false && (
                     <div
                       className="d-flex justify-content-center align-items-center"
@@ -154,7 +155,7 @@ const HomeEl = () => {
         return (
           <section
             key={index}
-            className={isFirstSection ? 'home-section-two-main-container' : `home-section-three-main-container home-main-container-${index}` }
+            className={isFirstSection ? 'home-section-two-main-container' : `home-section-three-main-container home-main-container-${index}`}
             style={isFirstSection ? {} : { backgroundImage: `url(${section.backGroundImageUrl})` }}
           >
             <div className="container">
@@ -194,9 +195,120 @@ const HomeEl = () => {
         );
       })}
 
+      {/* Certifications Section */}
+      <section className="home-certifications-section">
+        <div className="container">
+          <div className="row justify-content-center text-center mb-5">
+            <div className="col-lg-8" data-aos="fade-up">
+              <h2 className="certifications-section-heading">
+                {data.certificationsSection?.title || "Our Certifications"}
+              </h2>
+              <div className="certifications-divider"></div>
+              <p className="certifications-section-subheading">
+                {data.certificationsSection?.subTitle || "We are committed to global quality, environmental safety, and occupational health standards."}
+              </p>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            {((data.certificationsSection?.certificates && data.certificationsSection.certificates.length > 0)
+              ? data.certificationsSection.certificates
+              : [
+                  {
+                    title: "ISO 9001:2015 Certificate",
+                    subTitle: "Quality Management System",
+                    image: "/six.jpeg"
+                  },
+                  {
+                    title: "ISO 9001:2015 Annex",
+                    subTitle: "Scope & Locations",
+                    image: "/one.jpeg"
+                  },
+                  {
+                    title: "ISO 14001:2015 Certificate",
+                    subTitle: "Environmental Management System",
+                    image: "/two.jpeg"
+                  },
+                  {
+                    title: "ISO 14001:2015 Annex",
+                    subTitle: "Scope & Locations",
+                    image: "/three.jpeg"
+                  },
+                  {
+                    title: "ISO 45001:2018 Certificate",
+                    subTitle: "Occupational Health & Safety",
+                    image: "/four.jpeg"
+                  },
+                  {
+                    title: "ISO 45001:2018 Annex",
+                    subTitle: "Scope & Locations",
+                    image: "/five.jpeg"
+                  }
+                ]
+            ).slice(0, 6).map((cert, index) => (
+              <div
+                key={index}
+                className="col-12 col-sm-6 col-md-4 mb-4 d-flex"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <a
+                  href={cert.image}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedCertImage(cert.image);
+                  }}
+                  className="certification-card-link"
+                >
+                  <div className="certification-card d-flex flex-column h-100">
+                    <div className="certification-image-container">
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        className="img-fluid certification-img"
+                      />
+                      <div className="certification-overlay">
+                        <span className="view-cert-btn">View Full Certificate</span>
+                      </div>
+                    </div>
+                    <div className="certification-body">
+                      <h4 className="certification-title">{cert.title}</h4>
+                      <p className="certification-subtitle">{cert.subTitle}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <div className="row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-auto">
+              <Link to="/certifications" className="btn-view-all-certs">
+                View All Certifications <FaArrowRightLong className="ms-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox Modal for Certificates */}
+      {selectedCertImage && (
+        <div 
+          className="cert-lightbox-modal"
+          onClick={() => setSelectedCertImage(null)}
+        >
+          <div className="cert-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="cert-lightbox-close" onClick={() => setSelectedCertImage(null)}>
+              &times;
+            </button>
+            <img src={selectedCertImage} alt="Certificate" className="cert-lightbox-img" />
+          </div>
+        </div>
+      )}
+
       <FooterEl />
     </>
   );
 };
 
 export default HomeEl;
+

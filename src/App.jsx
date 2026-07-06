@@ -15,6 +15,7 @@ const ClayEl = lazy(() => import("./Components/ClayPage"));
 const CsrEl = lazy(() => import("./Components/CSRPage"));
 const LocationEl=lazy(()=>import("./Components/LocationPage"));
 const ContactUsEl = lazy(() => import("./Components/Contact-us"));
+const CertificationsPage = lazy(() => import("./Components/CertificationsPage"));
 const NewProductDetailPage = lazy(() => import("./Components/NewProductPage"));
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           {/* <Route exact path="/location" element={<LocationEl/>}/> */}
           <Route exact path="/location/:id" element={<LocationEl/>}/>
           <Route exact path="/contact-us" element={<ContactUsEl />} />
+          <Route exact path="/certifications" element={<CertificationsPage />} />
              {/* New Dynamic Product Route */}
           <Route exact path="/newproducts/:id" element={<NewProductDetailPage />} />
         </Routes>
